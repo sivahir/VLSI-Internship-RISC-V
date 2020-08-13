@@ -1,0 +1,19 @@
+proc SCHEMATIC_hierarchy_INVERTER {} {
+make project_INVERTER -name xi0 -origin {100 280}
+make project_INVERTER -name xi1 -origin {370 280}
+make project_INVERTER -name xi2 -origin {620 280}
+make name_net -name output -origin {800 290}
+make name_net -name in_pulse -origin {-90 290}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-190 440}
+make global -name GND -origin {-190 480}
+make global -name GND -origin {760 370}
+make capacitor -name C0 -capacitance 1000f -origin {760 330}
+  make_wire 470 290 520 290
+  make_wire 200 290 270 290
+  make_wire 0 290 -90 290
+  make_wire -190 400 -190 290
+  make_wire -190 290 -90 290
+  make_wire 760 290 720 290
+  make_wire 760 290 800 290
+}
+

@@ -1,0 +1,13 @@
+proc SCHEMATIC_LC_BandPass_filter_tb {} {
+make global -name GND -origin {850 800}
+make name_net -name output -origin {1210 700}
+make project_LC_BandPass_filter -name xi0 -origin {1060 690}
+make name_net -name input -origin {910 700}
+make pulse -name V0 -pulse_voltage 1.3V -origin {850 760}
+  make_wire 850 720 850 700
+  make_wire 910 700 850 700
+  make_wire 910 700 960 700
+  make_wire 1160 700 1210 700
+  make_wire 1210 700 1240 700
+}
+

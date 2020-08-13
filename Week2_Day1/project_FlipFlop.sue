@@ -1,0 +1,113 @@
+proc SCHEMATIC_project_FlipFlop {} {
+make input -name CLK -origin {60 -30}
+make name_net -name CLK -origin {80 -30}
+make name_net -name RESET_B -origin {60 -100}
+make name_net -name CLK_B -origin {370 -30}
+make pmos -orient R90 -name M0 -origin {360 160}
+make nmos -orient R270 -name M1 -origin {360 240}
+make name_net -orient RXY -name CLK -origin {550 520}
+make name_net -name CLK_B -origin {540 320}
+make name_net -name CLK -origin {360 100}
+make name_net -orient RXY -name CLK_B -origin {370 300}
+make name_net -name RESET_B -origin {980 390}
+make name_net -orient RXY -name CLK -origin {1330 310}
+make name_net -name CLK_B -origin {1320 110}
+make name_net -name RESET_B -origin {1530 240}
+make name_net -orient RXY -name CLK_B -origin {1490 520}
+make name_net -name CLK -origin {1480 320}
+make output -name Q_A -origin {2460 200}
+make output -name Q_B -origin {2510 360}
+make project_inverter_ckt -name xi0 -origin {210 -40}
+make project_inverter_ckt -name xi1 -origin {90 200}
+make project_inverter_ckt -name xi2 -origin {820 200}
+make project_NAND -orient RXY -name xi3 -origin {830 440}
+make nmos -orient R270 -name M3 -origin {540 460}
+make project_NAND -name xi4 -origin {1690 200}
+make project_inverter_ckt -orient RXY -name xi5 -origin {1680 350}
+make pmos -orient R90 -name M4 -origin {1480 380}
+make project_inverter_ckt -name xi6 -origin {2120 190}
+make project_inverter_ckt -name xi7 -origin {2410 350}
+make nmos -orient R270 -name M2 -origin {1320 250}
+make pmos -orient R90 -name M6 -origin {540 380}
+make nmos -orient R270 -name M10 -origin {1480 460}
+make pmos -orient R90 -name M63 -origin {1320 170}
+make input -name RESET_B -origin {40 -100}
+make input -name D_input -origin {-40 80}
+make name_net -name D_input -origin {-50 210}
+  make_wire 80 -30 110 -30
+  make_wire 80 -30 60 -30
+  make_wire 60 -100 40 -100
+  make_wire 60 -100 90 -100
+  make_wire 370 -30 410 -30
+  make_wire 370 -30 310 -30
+  make_wire 320 210 190 210
+  make_wire 360 300 370 300
+  make_wire 540 520 550 520
+  make_wire 730 440 580 440
+  make_wire 480 210 480 420
+  make_wire 480 420 500 420
+  make_wire 480 210 720 210
+  make_wire 480 210 400 210
+  make_wire 980 420 980 390
+  make_wire 930 420 980 420
+  make_wire 1320 310 1330 310
+  make_wire 1130 210 1130 440
+  make_wire 1280 210 1130 210
+  make_wire 1530 220 1530 240
+  make_wire 1530 220 1590 220
+  make_wire 930 440 1130 440
+  make_wire 1480 520 1490 520
+  make_wire 920 210 1130 210
+  make_wire 1580 340 1550 340
+  make_wire 1550 430 1520 430
+  make_wire 1440 420 1390 420
+  make_wire 1390 420 1390 200
+  make_wire 1390 200 1590 200
+  make_wire 1390 200 1360 200
+  make_wire 1550 340 1550 430
+  make_wire 1780 340 1920 340
+  make_wire 1920 340 1920 200
+  make_wire 1920 200 1790 200
+  make_wire 1920 200 2020 200
+  make_wire 2310 360 2270 360
+  make_wire 2270 360 2270 200
+  make_wire 2270 200 2220 200
+  make_wire 2270 200 2460 200
+  make_wire 400 160 400 210
+  make_wire 400 210 400 240
+  make_wire 320 160 320 210
+  make_wire 320 210 320 240
+  make_wire 500 380 500 420
+  make_wire 500 420 500 460
+  make_wire 580 380 580 440
+  make_wire 580 440 580 460
+  make_wire 1280 170 1280 210
+  make_wire 1280 210 1280 250
+  make_wire 1520 380 1520 430
+  make_wire 1520 430 1520 460
+  make_wire 1440 380 1440 420
+  make_wire 1440 420 1440 460
+  make_wire 1360 170 1360 200
+  make_wire 1360 200 1360 250
+  make_wire -50 210 -70 210
+  make_wire -50 210 -10 210
+}
+
+proc ICON_project_FlipFlop args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -10} -name CLK
+icon_term -type input -origin {-100 30} -name RESET_B
+icon_term -type output -origin {100 0} -name Q_A
+icon_term -type output -origin {100 20} -name Q_B
+icon_property -origin {-90 -10} -label CLK
+icon_property -origin {-90 30} -label RESET_B
+icon_property -origin {90 0} -anchor e -label Q_A
+icon_property -origin {90 20} -anchor e -label Q_B
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-90 -30} -label project_FlipFlop
+  icon_line -100 -40 100 -40 100 40 -100 40 -100 -40
+  icon_property -origin {-90 110} -type user -name name -default x
+
+}
+

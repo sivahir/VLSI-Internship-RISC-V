@@ -1,0 +1,160 @@
+proc SCHEMATIC_universal_4bitReg_tb {} {
+make project4in1mux -name xi0 -origin {90 160}
+make project4in1mux -name xi1 -origin {740 160}
+make project4in1mux -name xi2 -origin {1060 160}
+make project4in1mux -name xi3 -origin {420 160}
+make proj_dff_1x -name xi4 -origin {420 460}
+make proj_dff_1x -name xi5 -origin {100 460}
+make proj_dff_1x -name xi6 -origin {740 460}
+make proj_dff_1x -name xi7 -origin {1060 460}
+make name_net -name Q1 -origin {230 440}
+make name_net -name Q2 -origin {550 440}
+make name_net -name Q3 -origin {880 440}
+make name_net -name Q4 -origin {1200 440}
+make output -name Q1 -origin {1370 480}
+make output -name Q2 -origin {1370 530}
+make output -name Q3 -origin {1370 580}
+make output -name Q4 -origin {1370 620}
+make input -name CLK -origin {-170 590}
+make input -name RESET -origin {-170 640}
+make name_net -name RESET -origin {130 390}
+make name_net -name RESET -origin {450 400}
+make name_net -name RESET -origin {770 400}
+make name_net -name RESET -origin {1090 400}
+make input -name S0 -origin {-160 -190}
+make input -name S1 -origin {-160 -150}
+make name_net -name S0 -origin {70 40}
+make name_net -name S1 -origin {130 40}
+make name_net -name S0 -origin {400 40}
+make name_net -name S1 -origin {460 40}
+make name_net -name S1 -origin {780 30}
+make name_net -name S0 -origin {720 30}
+make name_net -name S0 -origin {1040 30}
+make name_net -name S1 -origin {1100 30}
+make input -name IN_1 -origin {-10 210}
+make input -name IN_2 -origin {320 210}
+make input -name IN_3 -origin {640 210}
+make input -name IN_4 -origin {960 210}
+make name_net -name s_in_R -origin {-100 150}
+make name_net -name s_in_L -origin {900 180}
+make input -name s_in_R -origin {-160 -80}
+make input -name s_in_L -origin {-160 -40}
+make name_net -name M1 -origin {230 120}
+make name_net -name M2 -origin {560 120}
+make name_net -name M3 -origin {870 120}
+make name_net -name M4 -origin {1200 120}
+make name_net -name M1 -origin {-30 440}
+make name_net -name M2 -origin {280 440}
+make name_net -name M3 -origin {600 440}
+make name_net -name M4 -origin {920 440}
+make name_net -name Q1 -origin {260 150}
+make name_net -name Q2 -origin {590 150}
+make name_net -name Q3 -origin {930 150}
+make name_net -name Q1 -origin {-30 120}
+make name_net -name Q2 -origin {-140 180}
+make name_net -name Q2 -origin {290 120}
+make name_net -name Q3 -origin {240 180}
+make name_net -name Q3 -origin {610 120}
+make name_net -name Q4 -origin {570 180}
+make name_net -name Q1B -origin {250 460}
+make name_net -name Q2B -origin {570 460}
+make name_net -name Q3B -origin {900 460}
+make name_net -name Q4B -origin {1240 460}
+make output -name Q1B -origin {1360 720}
+make output -name Q2B -origin {1360 770}
+make output -name Q3B -origin {1360 830}
+make output -name Q4B -origin {1360 880}
+  make_wire 200 440 230 440
+  make_wire 520 440 550 440
+  make_wire 840 440 880 440
+  make_wire 1160 440 1200 440
+  make_wire 930 480 960 480
+  make_wire 640 480 600 480
+  make_wire 600 590 930 590
+  make_wire 320 480 280 480
+  make_wire 280 480 280 590
+  make_wire 280 590 600 590
+  make_wire 0 480 -70 480
+  make_wire -70 480 -70 590
+  make_wire -70 590 280 590
+  make_wire -70 590 -170 590
+  make_wire 130 390 130 400
+  make_wire 70 40 70 80
+  make_wire 130 40 130 80
+  make_wire 400 40 400 80
+  make_wire 460 40 460 80
+  make_wire 190 120 230 120
+  make_wire 520 120 560 120
+  make_wire 840 120 870 120
+  make_wire 1160 120 1200 120
+  make_wire 600 480 600 590
+  make_wire 920 440 960 440
+  make_wire 600 440 640 440
+  make_wire 280 440 320 440
+  make_wire -30 440 0 440
+  make_wire 320 150 260 150
+  make_wire 640 150 590 150
+  make_wire 1040 30 1040 80
+  make_wire 1100 30 1100 80
+  make_wire 900 180 960 180
+  make_wire 930 150 960 150
+  make_wire -100 150 -10 150
+  make_wire -10 120 -30 120
+  make_wire -10 180 -140 180
+  make_wire 320 120 290 120
+  make_wire 320 180 240 180
+  make_wire 640 120 610 120
+  make_wire 720 30 720 80
+  make_wire 780 30 780 80
+  make_wire 640 180 570 180
+  make_wire 200 460 250 460
+  make_wire 520 460 570 460
+  make_wire 840 460 900 460
+  make_wire 1160 460 1240 460
+  make_wire 930 480 930 590
+}
+
+proc ICON_universal_4bitReg_tb args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -80} -name CLK
+icon_term -type input -origin {-100 -60} -name RESET
+icon_term -type input -origin {-100 -40} -name S0
+icon_term -type input -origin {-100 -20} -name S1
+icon_term -type input -origin {-100 0} -name IN_1
+icon_term -type input -origin {-100 20} -name IN_2
+icon_term -type input -origin {-100 40} -name IN_3
+icon_term -type input -origin {-100 60} -name IN_4
+icon_term -type input -origin {-100 80} -name s_in_R
+icon_term -type input -origin {-100 100} -name s_in_L
+icon_term -type output -origin {100 -80} -name Q1
+icon_term -type output -origin {100 -60} -name Q2
+icon_term -type output -origin {100 -40} -name Q3
+icon_term -type output -origin {100 -20} -name Q4
+icon_term -type output -origin {100 0} -name Q1B
+icon_term -type output -origin {100 20} -name Q2B
+icon_term -type output -origin {100 40} -name Q3B
+icon_term -type output -origin {100 60} -name Q4B
+icon_property -origin {-90 -80} -label CLK
+icon_property -origin {-90 -60} -label RESET
+icon_property -origin {-90 -40} -label S0
+icon_property -origin {-90 -20} -label S1
+icon_property -origin {-90 0} -label IN_1
+icon_property -origin {-90 20} -label IN_2
+icon_property -origin {-90 40} -label IN_3
+icon_property -origin {-90 60} -label IN_4
+icon_property -origin {-90 80} -label s_in_R
+icon_property -origin {-90 100} -label s_in_L
+icon_property -origin {90 -80} -anchor e -label Q1
+icon_property -origin {90 -60} -anchor e -label Q2
+icon_property -origin {90 -40} -anchor e -label Q3
+icon_property -origin {90 -20} -anchor e -label Q4
+icon_property -origin {90 0} -anchor e -label Q1B
+icon_property -origin {90 20} -anchor e -label Q2B
+icon_property -origin {90 40} -anchor e -label Q3B
+icon_property -origin {90 60} -anchor e -label Q4B
+icon_property -origin {-90 -130} -label {$name}
+icon_property -origin {-90 -110} -label universal_4bitReg_tb
+  icon_line -100 -120 100 -120 100 120 -100 120 -100 -120
+  icon_property -origin {-90 190} -type user -name name -default x
+}
+

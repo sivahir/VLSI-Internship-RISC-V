@@ -1,0 +1,30 @@
+proc SCHEMATIC_project_XOR {} {
+make project_NAND -name xi0 -origin {1380 200}
+make project_NAND -name xi1 -origin {1380 340}
+make project_NAND -name xi2 -origin {1110 280}
+make project_NAND -name xi3 -origin {1680 280}
+make output -name vout -origin {1840 280}
+make input -name vin_a -origin {940 200}
+make input -name vin_b -origin {930 360}
+  make_wire 1280 220 1250 220
+  make_wire 1250 340 1280 340
+  make_wire 1210 280 1250 280
+  make_wire 1480 200 1520 200
+  make_wire 1520 200 1520 280
+  make_wire 1520 280 1580 280
+  make_wire 1250 220 1250 280
+  make_wire 1250 280 1250 340
+  make_wire 1480 340 1520 340
+  make_wire 1520 340 1520 300
+  make_wire 1520 300 1580 300
+  make_wire 1780 280 1840 280
+  make_wire 1010 300 960 300
+  make_wire 960 360 1280 360
+  make_wire 960 360 930 360
+  make_wire 1010 280 960 280
+  make_wire 960 200 1280 200
+  make_wire 960 200 940 200
+  make_wire 960 200 960 280
+  make_wire 960 300 960 360
+}
+

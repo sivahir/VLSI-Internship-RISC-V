@@ -1,0 +1,15 @@
+proc SCHEMATIC_project_AND {} {
+make project_NAND -name xi0 -origin {1330 360}
+make project_inverter_ckt -name xi1 -origin {1610 350}
+make input -name pin_a -origin {1160 330}
+make input -name pin_b -origin {1160 400}
+make output -name p_out -origin {1710 360}
+  make_wire 1430 360 1510 360
+  make_wire 1160 330 1200 330
+  make_wire 1200 330 1200 360
+  make_wire 1200 360 1230 360
+  make_wire 1160 400 1200 400
+  make_wire 1200 400 1200 380
+  make_wire 1200 380 1230 380
+}
+

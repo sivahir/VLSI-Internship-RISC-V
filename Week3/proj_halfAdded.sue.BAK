@@ -1,0 +1,19 @@
+proc SCHEMATIC_proj_halfAdded {} {
+make input -name A -origin {890 190}
+make input -name B -origin {840 210}
+make output -name half_out -origin {1240 200}
+make output -name half_carry -origin {1290 300}
+make proj_xor1x -name xi0 -origin {1100 200}
+make proj_and1x -name xi1 -origin {1130 300}
+  make_wire 1200 200 1240 200
+  make_wire 1230 300 1290 300
+  make_wire 1030 300 980 300
+  make_wire 980 190 1000 190
+  make_wire 980 190 890 190
+  make_wire 980 190 980 300
+  make_wire 1030 320 940 320
+  make_wire 940 320 940 210
+  make_wire 940 210 1000 210
+  make_wire 940 210 840 210
+}
+

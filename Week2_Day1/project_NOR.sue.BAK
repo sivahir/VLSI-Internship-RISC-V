@@ -1,0 +1,46 @@
+proc SCHEMATIC_project_NOR {} {
+make pmos -name M0 -origin {1440 200}
+make pmos -name M1 -origin {1440 350}
+make nmos -name M3 -origin {1360 520}
+make nmos -orient RXY -name M2 -origin {1520 520}
+make global -name GND -origin {1360 560}
+make global -name GND -origin {1520 560}
+make global -orient RXY -name VDD -origin {1440 130}
+make output -name vout -origin {1520 430}
+make name_net -name vin_A -origin {1240 280}
+make name_net -name vin_B -origin {1250 520}
+make name_net -name vin_B -origin {1630 520}
+make input -name vin_A -origin {1070 180}
+make input -name vin_B -origin {1070 220}
+  make_wire 1440 240 1440 310
+  make_wire 1440 460 1360 460
+  make_wire 1360 460 1360 480
+  make_wire 1520 480 1520 460
+  make_wire 1520 460 1440 460
+  make_wire 1440 130 1440 160
+  make_wire 1440 430 1520 430
+  make_wire 1440 390 1440 430
+  make_wire 1440 430 1440 460
+  make_wire 1380 350 1340 350
+  make_wire 1340 200 1380 200
+  make_wire 1240 280 1340 280
+  make_wire 1340 280 1340 350
+  make_wire 1340 280 1340 200
+  make_wire 1580 520 1630 520
+  make_wire 1300 520 1250 520
+}
+
+proc ICON_project_NOR args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 0} -name vin_A
+icon_term -type input -origin {-100 20} -name vin_B
+icon_term -type output -origin {100 0} -name vout
+icon_property -origin {-90 0} -label vin_A
+icon_property -origin {-90 20} -label vin_B
+icon_property -origin {90 0} -anchor e -label vout
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-90 -30} -label project_NOR
+  icon_line -100 -40 100 -40 100 40 -100 40 -100 -40
+  icon_property -origin {-90 110} -type user -name name -default x
+}
+

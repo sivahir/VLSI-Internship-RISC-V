@@ -1,0 +1,23 @@
+proc SCHEMATIC_ripple_counter_tb {} {
+make global -name GND -origin {-470 160}
+make name_net -name out2 -origin {-50 -120}
+make name_net -name out1 -origin {70 -100}
+make name_net -name CLK -origin {-450 -120}
+make name_net -name RESET -origin {-370 -100}
+make proj_ripple_counter -name xi0 -origin {-220 -120}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-420 120}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 10ns -origin {-510 120}
+  make_wire -510 -120 -510 80
+  make_wire -420 -100 -420 80
+  make_wire -470 160 -420 160
+  make_wire -470 160 -510 160
+  make_wire -50 -120 -120 -120
+  make_wire -50 -120 20 -120
+  make_wire 70 -100 -120 -100
+  make_wire 70 -100 110 -100
+  make_wire -450 -120 -320 -120
+  make_wire -450 -120 -510 -120
+  make_wire -370 -100 -320 -100
+  make_wire -370 -100 -420 -100
+}
+

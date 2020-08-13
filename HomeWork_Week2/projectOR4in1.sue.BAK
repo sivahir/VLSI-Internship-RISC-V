@@ -1,0 +1,30 @@
+proc SCHEMATIC_projectOR4in1 {} {
+make proj_or1x -name xi0 -origin {340 200}
+make output -name out -origin {800 280}
+make proj_or1x -name xi2 -origin {660 280}
+make proj_or1x -name xi1 -origin {340 360}
+make name_net -name vin_A -origin {200 200}
+make name_net -name vin_B -origin {140 220}
+make name_net -name vin_C -origin {200 360}
+make name_net -name vin_D -origin {140 380}
+make input -name vin_A -origin {-50 430}
+make input -name vin_B -origin {-50 470}
+make input -name vin_C -origin {-50 500}
+make input -name vin_D -origin {-50 530}
+  make_wire 440 200 510 200
+  make_wire 510 200 510 280
+  make_wire 510 280 560 280
+  make_wire 440 360 510 360
+  make_wire 510 300 560 300
+  make_wire 760 280 800 280
+  make_wire 510 300 510 360
+  make_wire 200 200 240 200
+  make_wire 200 200 180 200
+  make_wire 140 220 240 220
+  make_wire 140 220 120 220
+  make_wire 200 360 180 360
+  make_wire 200 360 240 360
+  make_wire 130 380 140 380
+  make_wire 140 380 240 380
+}
+

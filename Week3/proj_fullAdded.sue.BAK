@@ -1,0 +1,43 @@
+proc SCHEMATIC_proj_fullAdded {} {
+make proj_xor1x -name xi0 -origin {-140 40}
+make proj_xor1x -name xi1 -origin {170 120}
+make proj_and1x -name xi2 -origin {-60 280}
+make proj_and1x -name xi3 -origin {-60 410}
+make input -name vin_A -origin {-370 -190}
+make input -name vin_B -origin {-370 -150}
+make input -name C_in -origin {-370 -110}
+make name_net -name vin_A -origin {-270 30}
+make name_net -name vin_B -origin {-330 50}
+make name_net -name C_in -origin {30 130}
+make name_net -name C_in -origin {-270 410}
+make name_net -name vout -origin {0 40}
+make name_net -name vout -origin {-370 430}
+make proj_or1x -name xi4 -origin {190 350}
+make output -name sum -origin {370 120}
+make output -name carry -origin {390 350}
+  make_wire -350 50 -330 50
+  make_wire -330 50 -240 50
+  make_wire 10 40 10 110
+  make_wire 10 110 70 110
+  make_wire 70 130 30 130
+  make_wire -300 30 -270 30
+  make_wire -270 30 -240 30
+  make_wire -160 280 -270 280
+  make_wire -270 30 -270 280
+  make_wire -160 300 -330 300
+  make_wire -330 300 -330 50
+  make_wire -270 410 -160 410
+  make_wire -270 410 -310 410
+  make_wire 0 40 -40 40
+  make_wire 0 40 10 40
+  make_wire -160 430 -370 430
+  make_wire 40 410 70 410
+  make_wire 70 410 70 370
+  make_wire 70 370 90 370
+  make_wire 40 280 70 280
+  make_wire 70 280 70 350
+  make_wire 70 350 90 350
+  make_wire 270 120 370 120
+  make_wire 290 350 390 350
+}
+

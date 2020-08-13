@@ -1,0 +1,34 @@
+proc SCHEMATIC_tb_reg2bit {} {
+make proj_reg2bit1x -name xi0 -origin {280 220}
+make global -name gnd -origin {-50 330}
+make global -name gnd -origin {80 380}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-50 280}
+make pulse -name V1 -pulse_voltage 1.3V -delay_time 1ns -pulse_width 300ns -period 600ns -origin {80 330}
+make global -name gnd -origin {-110 250}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {-110 200}
+make name_net -name vin -origin {110 200}
+make name_net -name clk -origin {20 240}
+make name_net -name reset_b -origin {110 260}
+make name_net -name out0 -origin {400 200}
+make name_net -name out1 -origin {410 220}
+  make_wire 80 290 80 260
+  make_wire -50 320 -50 330
+  make_wire 80 370 80 380
+  make_wire -110 160 -20 160
+  make_wire -20 190 50 190
+  make_wire 50 190 50 200
+  make_wire 60 200 60 220
+  make_wire 60 220 180 220
+  make_wire 60 200 50 200
+  make_wire -20 160 -20 190
+  make_wire -110 240 -110 250
+  make_wire 110 200 60 200
+  make_wire 110 200 180 200
+  make_wire 20 240 -50 240
+  make_wire 20 240 180 240
+  make_wire 110 260 80 260
+  make_wire 110 260 180 260
+  make_wire 380 200 400 200
+  make_wire 380 220 410 220
+}
+

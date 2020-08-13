@@ -1,0 +1,7 @@
+proc SCHEMATIC_test {} {
+make pulse -name V0 -origin {520 360}
+make global -name GND -origin {520 400}
+make name_net -name V_Positive -origin {520 190}
+  make_wire 520 190 520 320
+}
+

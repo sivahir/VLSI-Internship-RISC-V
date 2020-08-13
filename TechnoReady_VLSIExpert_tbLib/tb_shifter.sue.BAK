@@ -1,0 +1,54 @@
+proc SCHEMATIC_tb_shifter {} {
+make proj_dff_1x -name xi0 -origin {12640 2790}
+make proj_dff_1x -name xi1 -origin {12910 2790}
+make proj_dff_1x -name xi2 -origin {13180 2790}
+make proj_dff_1x -name xi3 -origin {13450 2790}
+make global -name gnd -origin {12170 3120}
+make pulse -name V0 -pulse_voltage 1.3V -pulse_width 2ns -period 4ns -origin {12170 3080}
+make global -name gnd -origin {12180 2580}
+make pulse -name V1 -pulse_voltage 1.3V -delay_time 15ns -pulse_width 200ns -period 400ns -origin {12180 2540}
+make name_net -name clk -origin {12170 3000}
+make name_net -name reset_b -origin {12370 2500}
+make name_net -name S0 -origin {12800 2770}
+make name_net -name S1 -origin {13060 2770}
+make name_net -name S2 -origin {13340 2770}
+make name_net -name S3 -origin {13590 2770}
+make name_net -name in0 -origin {12470 2770}
+make global -name gnd -origin {12210 2760}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {12210 2720}
+  make_wire 12170 2810 12540 2810
+  make_wire 13320 2960 13320 2810
+  make_wire 13320 2810 13350 2810
+  make_wire 13080 2810 13040 2810
+  make_wire 13040 2810 13040 2960
+  make_wire 13040 2960 13320 2960
+  make_wire 12810 2810 12770 2810
+  make_wire 12770 2810 12770 2960
+  make_wire 12770 2960 13040 2960
+  make_wire 12670 2500 12670 2730
+  make_wire 12670 2500 12940 2500
+  make_wire 12940 2500 12940 2730
+  make_wire 12940 2500 13210 2500
+  make_wire 13210 2500 13210 2730
+  make_wire 13210 2500 13480 2500
+  make_wire 13480 2500 13480 2730
+  make_wire 12170 2960 12770 2960
+  make_wire 12170 2810 12170 2960
+  make_wire 12370 2500 12180 2500
+  make_wire 12370 2500 12670 2500
+  make_wire 12800 2770 12740 2770
+  make_wire 13060 2770 13010 2770
+  make_wire 13340 2770 13280 2770
+  make_wire 13590 2770 13550 2770
+  make_wire 13590 2770 13600 2770
+  make_wire 12470 2770 12540 2770
+  make_wire 12470 2770 12430 2770
+  make_wire 12810 2770 12800 2770
+  make_wire 13080 2770 13060 2770
+  make_wire 13350 2770 13340 2770
+  make_wire 12170 2960 12170 3000
+  make_wire 12170 3000 12170 3040
+  make_wire 12210 2680 12430 2680
+  make_wire 12430 2680 12430 2770
+}
+

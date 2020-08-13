@@ -1,0 +1,10 @@
+proc SCHEMATIC_ResistiveDivider_tb {} {
+make name_net -name pulse_in -origin {440 450}
+make name_net -name output -origin {800 450}
+make project_RC_HighPass_filter -name xi0 -origin {600 440}
+make global -name GND -origin {440 530}
+make pulse -name V0 -origin {440 490}
+  make_wire 500 450 440 450
+  make_wire 800 450 700 450
+}
+

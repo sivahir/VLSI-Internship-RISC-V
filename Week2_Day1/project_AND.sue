@@ -1,0 +1,29 @@
+proc SCHEMATIC_project_AND {} {
+make project_NAND -name xi0 -origin {1330 360}
+make project_inverter_ckt -name xi1 -origin {1610 350}
+make input -name pin_a -origin {1160 330}
+make input -name pin_b -origin {1160 400}
+make output -name p_out -origin {1710 360}
+  make_wire 1430 360 1510 360
+  make_wire 1160 330 1200 330
+  make_wire 1200 330 1200 360
+  make_wire 1200 360 1230 360
+  make_wire 1160 400 1200 400
+  make_wire 1200 400 1200 380
+  make_wire 1200 380 1230 380
+}
+
+proc ICON_project_AND args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 0} -name pin_a
+icon_term -type input -origin {-100 20} -name pin_b
+icon_term -type output -origin {100 0} -name p_out
+icon_property -origin {-90 0} -label pin_a
+icon_property -origin {-90 20} -label pin_b
+icon_property -origin {90 0} -anchor e -label p_out
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-90 -30} -label project_AND
+  icon_line -100 -40 100 -40 100 40 -100 40 -100 -40
+  icon_property -origin {-90 110} -type user -name name -default x
+}
+

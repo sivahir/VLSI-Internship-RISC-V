@@ -1,0 +1,24 @@
+proc SCHEMATIC_testing_MUX {} {
+make pulse -name V1 -pulse_voltage 1.3V -origin {160 280}
+make pulse -name V0 -pulse_voltage 1.3V -origin {240 280}
+make name_net -name pulse_a -origin {160 240}
+make name_net -name pulse_b -origin {240 240}
+make name_net -name select -origin {320 240}
+make name_net -name select -origin {340 20}
+make name_net -name pulse_b -origin {240 -70}
+make name_net -name pulse_a -origin {300 -30}
+make name_net -name output_MUX -origin {700 90}
+make project_MUX -name xi0 -origin {500 100}
+make pulse -name V2 -pulse_voltage 1.3V -period 9ns -origin {320 280}
+make global -name GND -origin {160 320}
+make global -name GND -origin {320 320}
+make global -name GND -origin {240 320}
+  make_wire 400 90 340 90
+  make_wire 400 110 300 110
+  make_wire 400 130 240 130
+  make_wire 240 -70 240 130
+  make_wire 340 20 340 90
+  make_wire 300 -30 300 110
+  make_wire 700 90 600 90
+}
+

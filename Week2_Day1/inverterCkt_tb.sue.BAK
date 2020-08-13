@@ -1,0 +1,15 @@
+proc SCHEMATIC_inverterCkt_tb {} {
+make name_net -name output -origin {570 280}
+make global -name GND -origin {160 400}
+make name_net -name pulse_in -origin {160 280}
+make name_net -name pulse_in -origin {260 280}
+make project_inverter_ckt -name xi0 -origin {380 270}
+make global -name GND -origin {520 360}
+make capacitor -name C0 -origin {520 320}
+make pulse -name V0 -pulse_voltage 1.3V -origin {160 320}
+  make_wire 160 360 160 400
+  make_wire 280 280 260 280
+  make_wire 520 280 480 280
+  make_wire 520 280 570 280
+}
+

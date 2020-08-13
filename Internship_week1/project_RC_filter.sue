@@ -1,0 +1,36 @@
+proc SCHEMATIC_project_RC_filter {} {
+make resistor -orient R90 -name R0 -origin {1000 480}
+make resistor -orient R90 -name R1 -origin {1000 560}
+make global -name GND -origin {1280 610}
+make output -name vout -origin {1250 370}
+make name_net -name vout -origin {1200 530}
+make input -name vin -origin {760 440}
+make name_net -name vin -origin {830 520}
+make capacitor -name C0 -capacitance 100f -origin {1280 570}
+  make_wire 960 480 880 480
+  make_wire 880 560 960 560
+  make_wire 1040 480 1120 480
+  make_wire 1120 560 1040 560
+  make_wire 1120 530 1120 480
+  make_wire 1120 530 1120 560
+  make_wire 1200 530 1120 530
+  make_wire 1200 530 1280 530
+  make_wire 880 520 830 520
+  make_wire 880 480 880 520
+  make_wire 880 520 880 560
+}
+
+proc ICON_project_RC_filter args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 10} -name vin
+icon_term -type output -origin {100 10} -name vout
+icon_property -origin {-90 10} -label vin
+icon_property -origin {90 10} -anchor e -label vout
+icon_property -origin {-90 -40} -label {$name}
+icon_property -origin {-90 -20} -label project_RC_filter
+  icon_line -100 -30 100 -30 100 30 -100 30 -100 -30
+  icon_property -origin {-90 100} -type user -name name -default x
+
+}
+

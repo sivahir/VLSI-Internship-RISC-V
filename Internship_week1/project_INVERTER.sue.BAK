@@ -1,0 +1,21 @@
+proc SCHEMATIC_project_INVERTER {} {
+make name_net -name vout -origin {1150 600}
+make name_net -name vin -origin {800 600}
+make global -orient RXY -name VDD -origin {1040 440}
+make global -name GND -origin {1040 750}
+make nmos -name M1 -w 20.0u -origin {1040 680}
+make pmos -name M0 -w 10.0u -origin {1040 520}
+make input -name vin -origin {760 450}
+make output -name vout -origin {1300 440}
+  make_wire 980 520 880 520
+  make_wire 880 680 980 680
+  make_wire 1040 600 1150 600
+  make_wire 1040 560 1040 600
+  make_wire 1040 600 1040 640
+  make_wire 880 600 800 600
+  make_wire 880 520 880 600
+  make_wire 880 600 880 680
+  make_wire 1040 440 1040 480
+  make_wire 1040 720 1040 750
+}
+

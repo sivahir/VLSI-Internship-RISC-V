@@ -1,0 +1,70 @@
+proc SCHEMATIC_project4in1mux {} {
+make projectAND3in1 -name xi0 -origin {-140 -50}
+make projectOR4in1 -name xi1 -origin {260 130}
+make projectAND3in1 -name xi2 -origin {-140 70}
+make projectAND3in1 -name xi3 -origin {-140 190}
+make projectAND3in1 -name xi4 -origin {-140 310}
+make proj_inv1x -name xi5 -origin {-640 -310}
+make proj_inv1x -name xi6 -origin {-640 -450}
+make input -name A -origin {-850 -80}
+make input -name B -origin {-850 -40}
+make input -name C -origin {-850 10}
+make input -name D -origin {-850 50}
+make name_net -name D -origin {-420 340}
+make name_net -name C -origin {-430 220}
+make name_net -name B -origin {-430 100}
+make name_net -name A -origin {-420 -20}
+make input -name S0 -origin {-930 -480}
+make input -name S1 -origin {-930 -430}
+make name_net -name S0 -origin {-770 -450}
+make name_net -name S1 -origin {-760 -310}
+make name_net -name inv_0 -origin {-490 -450}
+make name_net -name inv_1 -origin {-490 -310}
+make name_net -name inv_0 -origin {-320 -40}
+make name_net -name inv_0 -origin {-350 200}
+make name_net -name S0 -origin {-360 80}
+make name_net -name S0 -origin {-370 320}
+make name_net -name inv_1 -origin {-260 -60}
+make name_net -name inv_1 -origin {-270 60}
+make name_net -name S1 -origin {-270 180}
+make name_net -name S1 -origin {-270 300}
+make output -name MUX_out -origin {400 110}
+  make_wire -40 -60 80 -60
+  make_wire 80 110 160 110
+  make_wire -40 60 50 60
+  make_wire 50 130 160 130
+  make_wire -40 180 80 180
+  make_wire 80 150 160 150
+  make_wire -40 300 120 300
+  make_wire 120 170 160 170
+  make_wire 80 -60 80 110
+  make_wire -580 -450 -490 -450
+  make_wire -580 -310 -490 -310
+  make_wire -240 -20 -420 -20
+  make_wire 50 60 50 130
+  make_wire -360 80 -240 80
+  make_wire -240 100 -430 100
+  make_wire 80 150 80 180
+  make_wire -240 220 -430 220
+  make_wire -370 320 -240 320
+  make_wire 120 170 120 300
+  make_wire -420 340 -240 340
+  make_wire -770 -450 -720 -450
+  make_wire -770 -450 -800 -450
+  make_wire -760 -310 -720 -310
+  make_wire -760 -310 -800 -310
+  make_wire -320 -40 -240 -40
+  make_wire -320 -40 -350 -40
+  make_wire -350 200 -370 200
+  make_wire -350 200 -240 200
+  make_wire -260 -60 -240 -60
+  make_wire -260 -60 -290 -60
+  make_wire -270 60 -300 60
+  make_wire -270 60 -240 60
+  make_wire -270 180 -300 180
+  make_wire -270 180 -240 180
+  make_wire -270 300 -300 300
+  make_wire -270 300 -240 300
+  make_wire 360 110 400 110
+}
+

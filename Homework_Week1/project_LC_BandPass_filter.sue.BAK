@@ -1,0 +1,46 @@
+proc SCHEMATIC_project_LC_BandPass_filter {} {
+make capacitor -name C0 -origin {880 760}
+make capacitor -name C1 -origin {1200 760}
+make capacitor -orient R90 -name C2 -origin {1000 640}
+make inductor -orient R270 -name L0 -origin {1110 640}
+make inductor -name L1 -origin {960 760}
+make inductor -name L2 -origin {1120 760}
+make global -name GND -origin {920 830}
+make input -name vin -origin {820 640}
+make output -name vout -origin {1320 540}
+make global -name GND -origin {1160 820}
+  make_wire 1150 640 1160 640
+  make_wire 1160 720 1120 720
+  make_wire 1160 720 1200 720
+  make_wire 960 640 920 640
+  make_wire 920 720 880 720
+  make_wire 920 720 960 720
+  make_wire 1040 640 1070 640
+  make_wire 1280 640 1160 640
+  make_wire 820 640 920 640
+  make_wire 1160 800 1120 800
+  make_wire 1160 800 1200 800
+  make_wire 920 800 920 830
+  make_wire 920 800 880 800
+  make_wire 920 800 960 800
+  make_wire 920 640 920 720
+  make_wire 1160 640 1160 720
+  make_wire 1160 800 1160 820
+  make_wire 1280 640 1280 540
+  make_wire 1280 540 1320 540
+}
+
+proc ICON_project_LC_BandPass_filter args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 10} -name vin
+icon_term -type output -origin {100 10} -name vout
+icon_property -origin {-90 10} -label vin
+icon_property -origin {90 10} -anchor e -label vout
+icon_property -origin {-90 -40} -label {$name}
+icon_property -origin {-90 -20} -label project_LC_BandPass_filter
+  icon_line -100 -30 100 -30 100 30 -100 30 -100 -30
+  icon_property -origin {-90 100} -type user -name name -default x
+
+}
+

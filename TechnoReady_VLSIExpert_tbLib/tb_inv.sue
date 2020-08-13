@@ -1,0 +1,30 @@
+proc SCHEMATIC_tb_inv {} {
+make proj_inv1x -name xi0 -origin {2060 320}
+make global -name gnd -origin {1810 470}
+make proj_inv1x -name xi1 -origin {2260 320}
+make pulse -name V0 -pulse_voltage 1.3V -origin {1810 410}
+make name_net -name vin -origin {1890 320}
+make name_net -name vout_a -origin {2140 320}
+make name_net -name vout_b -origin {2340 320}
+make proj_inv1x -name xi2 -origin {2460 320}
+make global -name gnd -origin {2590 400}
+make name_net -name vout_c -origin {2570 320}
+make global -name gnd -origin {2360 400}
+make global -name gnd -origin {2160 400}
+make capacitor -name C1 -capacitance 1000f -origin {2160 360}
+make capacitor -name C2 -capacitance 1000f -origin {2360 360}
+make capacitor -name C0 -capacitance 1000f -origin {2590 360}
+  make_wire 1810 320 1810 370
+  make_wire 1890 320 1810 320
+  make_wire 1890 320 1980 320
+  make_wire 2140 320 2120 320
+  make_wire 2340 320 2320 320
+  make_wire 1810 450 1810 470
+  make_wire 2570 320 2520 320
+  make_wire 2570 320 2590 320
+  make_wire 2160 320 2140 320
+  make_wire 2160 320 2180 320
+  make_wire 2360 320 2340 320
+  make_wire 2360 320 2380 320
+}
+

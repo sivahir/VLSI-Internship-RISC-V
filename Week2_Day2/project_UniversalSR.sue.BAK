@@ -1,0 +1,7 @@
+proc SCHEMATIC_project_UniversalSR {} {
+make proj_mux_2to1_1x -name xi0 -origin {720 -110}
+make proj_mux_2to1_1x -name xi1 -origin {1000 -110}
+make proj_mux_2to1_1x -name xi2 -origin {1270 -110}
+make proj_mux_2to1_1x -name xi3 -origin {1540 -110}
+}
+

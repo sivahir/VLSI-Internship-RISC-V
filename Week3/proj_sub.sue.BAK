@@ -1,0 +1,59 @@
+proc SCHEMATIC_proj_sub {} {
+make proj_mux_2to1_1x -name xi0 -origin {-60 70}
+make proj_fullAdded -name xi1 -origin {-60 210}
+make proj_mux_2to1_1x -name xi2 -origin {270 70}
+make proj_fullAdded -name xi3 -origin {260 210}
+make input -name D -origin {-190 -80}
+make input -name a0 -origin {-480 -120}
+make name_net -name a0_c -origin {-320 -120}
+make name_net -name a0_c -origin {-420 80}
+make input -name a1 -origin {-490 390}
+make name_net -name a1_c -origin {-310 390}
+make name_net -name a1_c -origin {90 80}
+make proj_inv1x -name xi4 -origin {-400 390}
+make proj_inv1x -name xi6 -origin {-400 -120}
+make input -name b0 -origin {-460 -30}
+make input -name b1 -origin {-450 300}
+make name_net -name b0 -origin {-200 220}
+make name_net -name b1 -origin {110 220}
+make output -name s0 -origin {40 200}
+make output -name s1 -origin {360 200}
+make name_net -name m0 -origin {60 70}
+make name_net -name m1 -origin {410 70}
+make name_net -name m0 -origin {-230 200}
+make name_net -name m1 -origin {110 200}
+make name_net -name D -origin {-270 240}
+make output -name carry -origin {460 220}
+make name_net -name a0 -origin {-230 60}
+make name_net -name a1 -origin {130 60}
+  make_wire 300 -80 300 20
+  make_wire -320 -120 -340 -120
+  make_wire -320 -120 -300 -120
+  make_wire -160 80 -420 80
+  make_wire -480 390 -490 390
+  make_wire -310 390 -340 390
+  make_wire -310 390 -290 390
+  make_wire -190 -80 -30 -80
+  make_wire -30 -80 300 -80
+  make_wire 170 80 90 80
+  make_wire -30 -80 -30 20
+  make_wire -160 220 -200 220
+  make_wire 110 220 160 220
+  make_wire 40 70 60 70
+  make_wire 370 70 410 70
+  make_wire -160 200 -230 200
+  make_wire 160 200 110 200
+  make_wire -160 240 -270 240
+  make_wire 40 220 80 220
+  make_wire 80 220 80 240
+  make_wire 80 240 160 240
+  make_wire 360 220 460 220
+  make_wire -230 60 -160 60
+  make_wire -230 60 -290 60
+  make_wire 170 60 130 60
+}
+
+proc ICON_proj_sub args {
+  icon_setup $args {{origin {0 0}} {orient R0}}
+}
+

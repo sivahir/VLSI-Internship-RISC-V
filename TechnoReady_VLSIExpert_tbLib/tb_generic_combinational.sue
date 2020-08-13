@@ -1,0 +1,68 @@
+proc SCHEMATIC_tb_generic_combinational {} {
+make proj_and1x -name xi0 -origin {9620 5330}
+make proj_or1x -name xi1 -origin {9590 5470}
+make proj_nor1x -name xi2 -origin {9580 5610}
+make pulse -name V0 -pulse_voltage 1.3V -origin {9280 5370}
+make pulse -name V1 -pulse_voltage 1.3V -delay_time 1ns -origin {9360 5370}
+make global -name gnd -origin {9280 5410}
+make global -name gnd -origin {9360 5410}
+make name_net -name vin_a -origin {9280 5300}
+make name_net -name vin_b -origin {9360 5300}
+make name_net -name vin_b -origin {9440 5350}
+make name_net -name vin_a -origin {9490 5330}
+make name_net -name vin_a -origin {9460 5470}
+make name_net -name vin_b -origin {9420 5490}
+make name_net -name vin_a -origin {9500 5600}
+make name_net -name vin_b -origin {9460 5620}
+make name_net -name vout_and -origin {9760 5330}
+make name_net -name vout_or -origin {9730 5470}
+make name_net -name vout_nor -origin {9680 5610}
+make name_net -name vin_a -origin {9460 5720}
+make name_net -name vin_b -origin {9420 5740}
+make name_net -name vin_a -origin {9460 5840}
+make name_net -name vin_b -origin {9420 5860}
+make proj_xor1x -name xi3 -origin {9590 5730}
+make proj_xnor1x -name xi4 -origin {9590 5840}
+make name_net -name vout_xor -origin {9730 5730}
+make name_net -name vout_xnor -origin {9740 5840}
+make name_net -name vin_a -origin {9030 5680}
+make name_net -name vin_b -origin {8990 5700}
+make proj_mux_2to1_1x -name xi5 -origin {9160 5690}
+make global -name gnd -origin {9140 5410}
+make name_net -name select -origin {9140 5300}
+make name_net -name select -origin {9190 5600}
+make pulse -name V2 -pulse_voltage 1.3V -pulse_width 5ns -period 10ns -origin {9140 5370}
+make name_net -name vout_mux -origin {9310 5690}
+  make_wire 9360 5270 9360 5300
+  make_wire 9360 5300 9360 5330
+  make_wire 9440 5350 9520 5350
+  make_wire 9520 5330 9490 5330
+  make_wire 9490 5470 9460 5470
+  make_wire 9490 5490 9420 5490
+  make_wire 9530 5600 9500 5600
+  make_wire 9530 5620 9460 5620
+  make_wire 9760 5330 9720 5330
+  make_wire 9760 5330 9780 5330
+  make_wire 9730 5470 9690 5470
+  make_wire 9730 5470 9750 5470
+  make_wire 9680 5610 9640 5610
+  make_wire 9680 5610 9700 5610
+  make_wire 9490 5720 9460 5720
+  make_wire 9490 5740 9420 5740
+  make_wire 9490 5840 9460 5840
+  make_wire 9490 5860 9420 5860
+  make_wire 9730 5730 9690 5730
+  make_wire 9730 5730 9760 5730
+  make_wire 9740 5840 9690 5840
+  make_wire 9740 5840 9760 5840
+  make_wire 9280 5270 9280 5300
+  make_wire 9280 5300 9280 5330
+  make_wire 9060 5680 9030 5680
+  make_wire 9060 5700 8990 5700
+  make_wire 9140 5270 9140 5300
+  make_wire 9140 5300 9140 5330
+  make_wire 9190 5600 9190 5640
+  make_wire 9310 5690 9260 5690
+  make_wire 9310 5690 9340 5690
+}
+

@@ -1,0 +1,32 @@
+proc SCHEMATIC_subtractor_tb {} {
+make project_subtractor -name xi0 -origin {-10 -130}
+make global -name gnd -origin {-200 240}
+make name_net -name v_a0 -origin {-200 160}
+make name_net -name v_b0 -origin {-120 160}
+make name_net -name v_a0 -origin {-260 -140}
+make name_net -name v_b0 -origin {-340 -100}
+make global -name gnd -origin {-270 -50}
+make name_net -name s0_out -origin {140 -160}
+make name_net -name s1_out -origin {240 -140}
+make name_net -name c_out -origin {280 -120}
+make pulse -name V1 -pulse_voltage 1.3V -origin {-200 200}
+make pulse -name V2 -pulse_voltage 1.3V -origin {-120 200}
+make global -name gnd -origin {-180 -160}
+make name_net -name D_in -origin {-150 -160}
+  make_wire -200 240 -120 240
+  make_wire -110 -140 -260 -140
+  make_wire -110 -100 -340 -100
+  make_wire -110 -120 -270 -120
+  make_wire -110 -80 -270 -80
+  make_wire -270 -80 -270 -120
+  make_wire -270 -80 -270 -50
+  make_wire 140 -160 90 -160
+  make_wire 140 -160 190 -160
+  make_wire 240 -140 90 -140
+  make_wire 240 -140 260 -140
+  make_wire 280 -120 90 -120
+  make_wire 280 -120 310 -120
+  make_wire -150 -160 -110 -160
+  make_wire -150 -160 -180 -160
+}
+

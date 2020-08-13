@@ -1,0 +1,74 @@
+proc SCHEMATIC_uniReg_tb {} {
+make universal_4bitReg_tb -name xi0 -origin {-60 60}
+make name_net -name CLK -origin {-240 -20}
+make name_net -name RESET -origin {-290 0}
+make name_net -name S0 -origin {-320 20}
+make name_net -name S1 -origin {-350 40}
+make name_net -name IN_1 -origin {-390 60}
+make name_net -name IN_2 -origin {-420 80}
+make name_net -name IN_3 -origin {-460 100}
+make name_net -name IN_4 -origin {-490 120}
+make name_net -name S_R -origin {-540 140}
+make name_net -name S_L -origin {-590 160}
+make pulse -name V0 -origin {-990 680}
+make global -name GND -origin {-500 760}
+make pulse -name V1 -origin {-870 680}
+make pulse -name V2 -origin {-750 680}
+make pulse -name V3 -origin {-640 680}
+make pulse -name V4 -origin {-550 680}
+make pulse -name V5 -origin {-440 680}
+make pulse -name V6 -origin {-340 680}
+make pulse -name V7 -origin {-250 680}
+make pulse -name V8 -origin {-160 680}
+make pulse -name V9 -origin {-70 680}
+make name_net -name CLK -origin {-990 560}
+make name_net -name RESET -origin {-870 560}
+make name_net -name S0 -origin {-750 560}
+make name_net -name S1 -origin {-640 560}
+make name_net -name IN_1 -origin {-550 560}
+make name_net -name IN_2 -origin {-440 560}
+make name_net -name IN_3 -origin {-340 560}
+make name_net -name IN_4 -origin {-250 560}
+make name_net -name S_R -origin {-160 560}
+make name_net -name S_L -origin {-70 560}
+  make_wire -160 0 -290 0
+  make_wire -160 20 -320 20
+  make_wire -160 40 -350 40
+  make_wire -160 60 -390 60
+  make_wire -160 80 -420 80
+  make_wire -460 100 -160 100
+  make_wire -160 120 -490 120
+  make_wire -160 140 -540 140
+  make_wire -160 160 -590 160
+  make_wire -240 -20 -160 -20
+  make_wire -870 720 -990 720
+  make_wire -750 720 -870 720
+  make_wire -640 720 -750 720
+  make_wire -550 720 -640 720
+  make_wire -340 720 -440 720
+  make_wire -250 720 -340 720
+  make_wire -160 720 -250 720
+  make_wire -160 720 -70 720
+  make_wire -500 720 -440 720
+  make_wire -500 720 -550 720
+  make_wire -500 720 -500 760
+  make_wire -990 560 -990 640
+  make_wire -870 560 -870 640
+  make_wire -750 560 -750 640
+  make_wire -640 560 -640 640
+  make_wire -550 560 -550 640
+  make_wire -440 560 -440 640
+  make_wire -340 560 -340 640
+  make_wire -250 560 -250 640
+  make_wire -160 560 -160 640
+  make_wire -70 560 -70 640
+  make_wire 40 -20 160 -20
+  make_wire 40 0 230 0
+  make_wire 40 20 290 20
+  make_wire 40 40 350 40
+  make_wire 40 60 400 60
+  make_wire 40 80 450 80
+  make_wire 40 100 510 100
+  make_wire 40 120 570 120
+}
+

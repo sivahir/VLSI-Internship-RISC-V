@@ -1,0 +1,39 @@
+proc SCHEMATIC_source_testing {} {
+make name_net -name pulse_inA -origin {840 480}
+make name_net -name pulse_inB -origin {960 490}
+make name_net -name pulse_inA -origin {1200 -140}
+make name_net -name pulse_inB -origin {1070 -90}
+make name_net -name NAND_output -origin {1810 -110}
+make project_NAND -name xi0 -origin {1470 -110}
+make global -name GND -origin {840 620}
+make global -name GND -origin {960 630}
+make project_NOR -name xi1 -origin {1470 50}
+make name_net -name pulse_inB -origin {1070 60}
+make name_net -name pulse_inA -origin {1230 30}
+make name_net -name NOR_output -origin {1810 40}
+make name_net -name pulse_inA -origin {1160 220}
+make name_net -name pulse_inB -origin {1050 230}
+make name_net -name AND_output -origin {1810 220}
+make project_AND -name xi2 -origin {1470 220}
+make pulse -name V0 -pulse_voltage 1.3V -origin {840 540}
+make pulse -name V1 -pulse_voltage 1.3V -origin {960 540}
+  make_wire 1200 -110 1200 -140
+  make_wire 1200 -110 1370 -110
+  make_wire 1070 -90 1370 -90
+  make_wire 1570 -110 1810 -110
+  make_wire 1810 50 1810 40
+  make_wire 1070 70 1070 60
+  make_wire 1230 50 1230 30
+  make_wire 1570 50 1810 50
+  make_wire 1230 50 1370 50
+  make_wire 1070 70 1370 70
+  make_wire 840 580 840 620
+  make_wire 840 480 840 500
+  make_wire 960 580 960 630
+  make_wire 960 490 960 500
+  make_wire 1370 220 1160 220
+  make_wire 1050 240 1050 230
+  make_wire 1050 240 1370 240
+  make_wire 1570 220 1810 220
+}
+

@@ -1,0 +1,28 @@
+proc SCHEMATIC_fullAdded_tb {} {
+make proj_fullAdded -name xi0 -origin {-60 80}
+make name_net -name V_A -origin {-200 70}
+make name_net -name V_B -origin {-260 90}
+make name_net -name SUM -origin {170 70}
+make name_net -name CARRY_OUT -origin {230 90}
+make name_net -name V_A -origin {-210 210}
+make name_net -name V_B -origin {-130 210}
+make name_net -name C_in -origin {-50 210}
+make global -name GND -origin {-130 320}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-210 250}
+make pulse -name V1 -pulse_voltage 1.3V -origin {-130 250}
+make pulse -name V2 -pulse_voltage 1.3V -origin {-50 280}
+make global -name GND -origin {-330 110}
+  make_wire -200 70 -230 70
+  make_wire -200 70 -160 70
+  make_wire -260 90 -160 90
+  make_wire -260 90 -280 90
+  make_wire -210 290 -210 320
+  make_wire -130 320 -210 320
+  make_wire -130 320 -50 320
+  make_wire -130 290 -130 320
+  make_wire -50 210 -50 240
+  make_wire 40 90 230 90
+  make_wire 170 70 40 70
+  make_wire -330 110 -160 110
+}
+

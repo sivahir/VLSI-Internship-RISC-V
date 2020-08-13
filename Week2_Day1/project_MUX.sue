@@ -1,0 +1,46 @@
+proc SCHEMATIC_project_MUX {} {
+make project_NAND -name xi0 -origin {1100 120}
+make project_NAND -name xi1 -origin {1100 280}
+make project_NAND -name xi2 -origin {780 200}
+make project_NAND -name xi3 -origin {1380 200}
+make output -name output -origin {1480 200}
+make input -name S -origin {560 210}
+make input -name vin_a -origin {560 120}
+make input -name vin_b -origin {560 300}
+  make_wire 1200 280 1250 280
+  make_wire 1250 280 1250 220
+  make_wire 1250 220 1280 220
+  make_wire 1200 120 1250 120
+  make_wire 1250 120 1250 200
+  make_wire 1250 200 1280 200
+  make_wire 880 200 940 200
+  make_wire 940 200 940 280
+  make_wire 940 280 1000 280
+  make_wire 680 200 600 200
+  make_wire 600 220 680 220
+  make_wire 600 210 600 200
+  make_wire 600 210 600 220
+  make_wire 1000 120 560 120
+  make_wire 1000 300 560 300
+  make_wire 1000 140 580 140
+  make_wire 580 140 580 210
+  make_wire 580 210 560 210
+  make_wire 580 210 600 210
+}
+
+proc ICON_project_MUX args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -10} -name S
+icon_term -type input -origin {-100 10} -name vin_a
+icon_term -type input -origin {-100 30} -name vin_b
+icon_term -type output -origin {100 -10} -name output
+icon_property -origin {-90 -10} -label S
+icon_property -origin {-90 10} -label vin_a
+icon_property -origin {-90 30} -label vin_b
+icon_property -origin {90 -10} -anchor e -label output
+icon_property -origin {-90 -60} -label {$name}
+icon_property -origin {-90 -40} -label project_MUX
+  icon_line -100 -50 100 -50 100 50 -100 50 -100 -50
+  icon_property -origin {-90 120} -type user -name name -default x
+}
+

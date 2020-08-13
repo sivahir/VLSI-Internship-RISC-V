@@ -1,0 +1,21 @@
+proc SCHEMATIC_halfAdded_tb {} {
+make global -name GND -origin {-200 340}
+make name_net -name in_B -origin {-160 240}
+make name_net -name in_A -origin {-240 240}
+make name_net -name in_A -origin {-170 60}
+make name_net -name in_B -origin {-240 80}
+make name_net -name out -origin {190 60}
+make name_net -name h_carry -origin {310 80}
+make proj_halfAdded -name xi0 -origin {60 60}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-240 280}
+make pulse -name V1 -pulse_voltage 1.3V -origin {-160 280}
+  make_wire -200 320 -240 320
+  make_wire -200 320 -160 320
+  make_wire -200 320 -200 340
+  make_wire -40 60 -170 60
+  make_wire -240 80 -40 80
+  make_wire 190 60 160 60
+  make_wire 190 60 220 60
+  make_wire 160 80 310 80
+}
+

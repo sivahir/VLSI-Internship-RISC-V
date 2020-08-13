@@ -1,0 +1,343 @@
+proc SCHEMATIC_project_4bit_Processor {} {
+make proj_mux_2to1_1x -name xi0 -origin {-380 90}
+make proj_mux_2to1_1x -name xi1 -origin {-380 190}
+make proj_reg2bit1x -name xi2 -origin {20 160}
+make proj_mux_2to1_1x -name xi3 -origin {-380 320}
+make proj_mux_2to1_1x -name xi4 -origin {-380 420}
+make proj_reg2bit1x -name xi5 -origin {20 370}
+make input -orient R90 -name initilization -origin {-350 -50}
+make input -orient R90 -name clk -origin {-150 -50}
+make input -orient R90 -name reset_b -origin {-100 -50}
+make proj_mux_2to1_1x -name xi6 -origin {-380 550}
+make proj_mux_2to1_1x -name xi7 -origin {-380 650}
+make proj_reg2bit1x -name xi8 -origin {20 590}
+make input -name input0_0 -origin {-610 90}
+make input -name input0_1 -origin {-610 190}
+make input -name input1_0 -origin {-610 320}
+make input -name input1_1 -origin {-610 420}
+make name_net -name inp0_0 -origin {320 140}
+make name_net -name inp0_1 -origin {420 160}
+make name_net -name inp1_0 -origin {320 350}
+make name_net -name inp1_1 -origin {420 370}
+make output -name out_0 -origin {320 570}
+make output -name out_1 -origin {420 590}
+make input -name output_0 -origin {-610 540}
+make input -name output_1 -origin {-610 640}
+make proj_reg2bit1x -name xi9 -origin {20 1030}
+make proj_reg2bit1x -name xi10 -origin {20 1210}
+make proj_reg2bit1x -name xi11 -origin {20 1380}
+make proj_reg2bit1x -name xi12 -origin {20 860}
+make name_net -name ins0_0 -origin {260 840}
+make name_net -name ins0_1 -origin {390 860}
+make name_net -name ins1_0 -origin {260 1010}
+make name_net -name ins1_1 -origin {390 1030}
+make name_net -name ins2_0 -origin {260 1190}
+make name_net -name ins2_1 -origin {390 1210}
+make name_net -name ins3_0 -origin {260 1360}
+make name_net -name ins3_1 -origin {390 1380}
+make input -name i0_0 -origin {-110 840}
+make input -name i0_1 -origin {-150 860}
+make input -name i1_0 -origin {-110 1010}
+make input -name i1_1 -origin {-150 1030}
+make input -name i2_0 -origin {-110 1190}
+make input -name i2_1 -origin {-150 1210}
+make input -name i3_0 -origin {-110 1360}
+make input -name i3_1 -origin {-150 1380}
+make proj_mux_2to1_1x -name xi13 -origin {-460 1870}
+make proj_mux_2to1_1x -name xi14 -origin {-460 1770}
+make proj_2bitFullAdder1_sue -name xi15 -origin {420 1820}
+make name_net -name pc_0 -origin {110 1810}
+make name_net -name pc_1 -origin {170 1830}
+make global -name gnd -origin {210 1890}
+make input -name pc_inc_0 -origin {300 1810}
+make input -name pc_inc_1 -origin {300 1850}
+make proj_reg2bit1x -name xi16 -origin {-30 1830}
+make proj_mux_2to1_1x -name xi17 -origin {1540 1800}
+make proj_mux_2to1_1x -name xi18 -origin {1540 1900}
+make proj_mux_2to1_1x -name xi19 -origin {1540 1490}
+make proj_mux_2to1_1x -name xi20 -origin {1540 1590}
+make proj_mux_2to1_1x -name xi21 -origin {1940 1840}
+make proj_mux_2to1_1x -name xi22 -origin {1940 1530}
+make output -name instruction0 -origin {2250 1530}
+make output -name instruction1 -origin {2250 1840}
+make name_net -name instruction0 -origin {2160 1530}
+make name_net -name instruction1 -origin {2190 1840}
+make name_net -name ins0_0 -origin {1400 1480}
+make name_net -name ins1_0 -origin {1320 1500}
+make name_net -name ins2_0 -origin {1400 1580}
+make name_net -name ins3_0 -origin {1320 1600}
+make name_net -name ins0_1 -origin {1350 1790}
+make name_net -name ins1_1 -origin {1270 1810}
+make name_net -name ins2_1 -origin {1400 1890}
+make name_net -name ins3_1 -origin {1320 1910}
+make name_net -name pc_0 -origin {1570 1240}
+make name_net -name pc_1 -origin {1960 1330}
+make proj_reg2bit1x -name xi23 -origin {-30 2090}
+make name_net -name o0 -origin {-200 2070}
+make name_net -name o1 -origin {-250 2090}
+make output -name acc_0 -origin {250 2070}
+make output -name acc_1 -origin {310 2090}
+make name_net -name acc_0 -origin {210 2070}
+make name_net -name acc_1 -origin {220 2090}
+make proj_mux_2to1_1x -name xi25 -origin {-540 2410}
+make proj_mux_2to1_1x -name xi26 -origin {-540 2510}
+make proj_mux_2to1_1x -name xi27 -origin {-540 2670}
+make proj_mux_2to1_1x -name xi28 -origin {-540 2770}
+make global -name gnd -origin {-180 2550}
+make name_net -name a0 -origin {-320 2410}
+make name_net -name a1 -origin {-380 2670}
+make name_net -name b1 -origin {-300 2770}
+make name_net -name b0 -origin {-400 2510}
+make name_net -name o0 -origin {170 2430}
+make name_net -name o1 -origin {230 2450}
+make proj_2bitFullAdder1_sue -name xi24 -origin {-60 2440}
+make name_net -name instruction0 -origin {-520 2240}
+make name_net -name inp0_0 -origin {-720 2400}
+make name_net -name inp0_1 -origin {-770 2420}
+make name_net -name inp1_0 -origin {-890 2500}
+make name_net -name inp1_1 -origin {-1000 2520}
+make global -name gnd -origin {-1040 2670}
+  make_wire -280 90 -190 90
+  make_wire -190 140 -80 140
+  make_wire -280 190 -200 190
+  make_wire -200 160 -80 160
+  make_wire -280 320 -200 320
+  make_wire -280 650 -190 650
+  make_wire -280 550 -200 550
+  make_wire -200 550 -200 570
+  make_wire -190 590 -80 590
+  make_wire -350 140 -350 270
+  make_wire -350 370 -350 270
+  make_wire -200 160 -200 190
+  make_wire 120 140 320 140
+  make_wire -280 420 -200 420
+  make_wire -200 370 -80 370
+  make_wire -200 370 -200 420
+  make_wire -200 350 -80 350
+  make_wire -80 370 -80 350
+  make_wire -200 320 -200 350
+  make_wire -610 90 -550 90
+  make_wire -550 80 -480 80
+  make_wire -480 100 -550 100
+  make_wire -610 190 -550 190
+  make_wire -550 190 -550 180
+  make_wire -550 180 -480 180
+  make_wire -480 200 -550 200
+  make_wire -550 200 -550 190
+  make_wire -610 320 -550 320
+  make_wire -550 320 -550 310
+  make_wire -550 310 -480 310
+  make_wire -480 330 -550 330
+  make_wire -550 330 -550 320
+  make_wire -610 420 -550 420
+  make_wire -550 420 -550 410
+  make_wire -550 410 -480 410
+  make_wire -480 430 -550 430
+  make_wire -550 430 -550 420
+  make_wire 420 160 120 160
+  make_wire 120 350 320 350
+  make_wire 420 370 120 370
+  make_wire 120 570 320 570
+  make_wire 420 590 120 590
+  make_wire -480 540 -610 540
+  make_wire -480 640 -610 640
+  make_wire -80 570 -200 570
+  make_wire 260 840 120 840
+  make_wire 260 840 340 840
+  make_wire 390 860 120 860
+  make_wire 390 860 440 860
+  make_wire 260 1010 120 1010
+  make_wire 260 1010 340 1010
+  make_wire 390 1030 120 1030
+  make_wire 390 1030 440 1030
+  make_wire 260 1190 120 1190
+  make_wire 260 1190 340 1190
+  make_wire 390 1210 120 1210
+  make_wire 390 1210 440 1210
+  make_wire 260 1360 120 1360
+  make_wire 260 1360 340 1360
+  make_wire 390 1380 120 1380
+  make_wire 390 1380 440 1380
+  make_wire -80 840 -110 840
+  make_wire -80 860 -150 860
+  make_wire -80 1010 -110 1010
+  make_wire -80 1030 -150 1030
+  make_wire -80 1190 -110 1190
+  make_wire -80 1210 -150 1210
+  make_wire -80 1360 -110 1360
+  make_wire -80 1380 -150 1380
+  make_wire -350 -50 -350 40
+  make_wire -350 40 -350 140
+  make_wire -550 80 -550 90
+  make_wire -550 90 -550 100
+  make_wire -190 90 -190 140
+  make_wire -560 1780 -700 1780
+  make_wire -700 1780 -700 1630
+  make_wire -700 1630 680 1630
+  make_wire 520 1830 680 1830
+  make_wire 680 1830 680 1630
+  make_wire -560 1880 -770 1880
+  make_wire -770 1880 -770 1570
+  make_wire -770 1570 770 1570
+  make_wire 770 1570 770 1810
+  make_wire 770 1810 520 1810
+  make_wire -360 1770 -250 1770
+  make_wire -250 1810 -130 1810
+  make_wire -360 1870 -240 1870
+  make_wire -240 1830 -130 1830
+  make_wire 170 1830 70 1830
+  make_wire -250 1770 -250 1810
+  make_wire -240 1830 -240 1870
+  make_wire 210 1870 210 1890
+  make_wire 210 1870 320 1870
+  make_wire 320 1830 170 1830
+  make_wire 320 1810 300 1810
+  make_wire 320 1850 300 1850
+  make_wire -80 200 -100 200
+  make_wire -100 200 -100 -50
+  make_wire -80 410 -100 410
+  make_wire -100 410 -100 200
+  make_wire -80 630 -100 630
+  make_wire -100 410 -100 630
+  make_wire -100 1250 -80 1250
+  make_wire -80 900 -100 900
+  make_wire -100 900 -100 630
+  make_wire -80 1070 -100 1070
+  make_wire -100 1070 -100 900
+  make_wire -100 1070 -100 1250
+  make_wire -80 180 -150 180
+  make_wire -150 180 -150 -50
+  make_wire -80 390 -150 390
+  make_wire -150 390 -150 180
+  make_wire -80 610 -150 610
+  make_wire -150 610 -150 390
+  make_wire -150 860 -150 610
+  make_wire -80 880 -150 880
+  make_wire -150 880 -150 860
+  make_wire -150 1030 -150 880
+  make_wire -80 1050 -150 1050
+  make_wire -150 1050 -150 1030
+  make_wire -150 1400 -80 1400
+  make_wire -150 1210 -150 1050
+  make_wire -150 1380 -150 1400
+  make_wire -80 1420 -100 1420
+  make_wire -220 1850 -220 1290
+  make_wire -220 1290 -100 1290
+  make_wire -100 1290 -100 1420
+  make_wire -100 1290 -100 1250
+  make_wire -130 1870 -170 1870
+  make_wire -170 1870 -170 1310
+  make_wire -170 1310 -150 1310
+  make_wire -150 1310 -150 1380
+  make_wire -150 1310 -150 1210
+  make_wire 1640 1490 1760 1490
+  make_wire 1760 1490 1760 1520
+  make_wire 1760 1520 1840 1520
+  make_wire 1640 1590 1760 1590
+  make_wire 1760 1590 1760 1540
+  make_wire 1760 1540 1840 1540
+  make_wire 1640 1800 1760 1800
+  make_wire 1760 1800 1760 1830
+  make_wire 1760 1830 1840 1830
+  make_wire 1640 1900 1760 1900
+  make_wire 1760 1900 1760 1850
+  make_wire 1760 1850 1840 1850
+  make_wire 2160 1530 2040 1530
+  make_wire 2160 1530 2250 1530
+  make_wire 2190 1840 2040 1840
+  make_wire 2190 1840 2250 1840
+  make_wire 1400 1480 1440 1480
+  make_wire 1400 1480 1350 1480
+  make_wire 1320 1500 1440 1500
+  make_wire 1320 1500 1300 1500
+  make_wire 1350 1790 1300 1790
+  make_wire 1270 1810 1250 1810
+  make_wire 1440 1790 1350 1790
+  make_wire 1440 1810 1270 1810
+  make_wire 1400 1580 1440 1580
+  make_wire 1400 1580 1350 1580
+  make_wire 1320 1600 1440 1600
+  make_wire 1320 1600 1300 1600
+  make_wire 1400 1890 1440 1890
+  make_wire 1400 1890 1350 1890
+  make_wire 1320 1910 1440 1910
+  make_wire 1320 1910 1300 1910
+  make_wire 1570 1240 1480 1240
+  make_wire 1570 1240 1630 1240
+  make_wire 1570 1750 1570 1850
+  make_wire 1570 1440 1570 1240
+  make_wire 1570 1540 1570 1440
+  make_wire 1570 1540 1570 1750
+  make_wire 1960 1330 1870 1330
+  make_wire 1970 1330 1960 1330
+  make_wire 1970 1330 2020 1330
+  make_wire 1970 1480 1970 1790
+  make_wire 1970 1480 1970 1330
+  make_wire -350 370 -350 500
+  make_wire -350 500 -350 600
+  make_wire -190 590 -190 650
+  make_wire -430 1260 -430 1720
+  make_wire -430 1720 -430 1820
+  make_wire -430 1260 -350 1260
+  make_wire -350 1260 -350 600
+  make_wire -130 2110 -150 2110
+  make_wire -150 2110 -150 1850
+  make_wire -150 1850 -130 1850
+  make_wire -150 1850 -220 1850
+  make_wire -130 2130 -170 2130
+  make_wire -170 1870 -170 2130
+  make_wire -200 2070 -130 2070
+  make_wire -200 2070 -210 2070
+  make_wire -250 2090 -130 2090
+  make_wire -250 2090 -300 2090
+  make_wire 320 1790 230 1790
+  make_wire 230 1790 230 1720
+  make_wire 230 1720 90 1720
+  make_wire 90 1720 90 1810
+  make_wire 90 1810 110 1810
+  make_wire 90 1810 70 1810
+  make_wire 210 2070 70 2070
+  make_wire 210 2070 250 2070
+  make_wire 220 2090 70 2090
+  make_wire 220 2090 310 2090
+  make_wire -380 2510 -380 2430
+  make_wire -320 2670 -320 2450
+  make_wire -320 2450 -160 2450
+  make_wire -220 2770 -220 2470
+  make_wire -220 2470 -160 2470
+  make_wire -320 2410 -440 2410
+  make_wire -320 2410 -160 2410
+  make_wire -160 2430 -380 2430
+  make_wire -380 2670 -320 2670
+  make_wire -380 2670 -440 2670
+  make_wire -300 2770 -440 2770
+  make_wire -300 2770 -220 2770
+  make_wire -400 2510 -440 2510
+  make_wire -400 2510 -380 2510
+  make_wire -180 2550 -180 2490
+  make_wire -180 2490 -160 2490
+  make_wire 40 2430 170 2430
+  make_wire 40 2450 230 2450
+  make_wire -520 2240 -560 2240
+  make_wire -510 2620 -510 2460
+  make_wire -510 2620 -510 2720
+  make_wire -520 2240 -510 2240
+  make_wire -510 2240 -470 2240
+  make_wire -510 2360 -510 2240
+  make_wire -510 2360 -510 2460
+  make_wire -720 2400 -640 2400
+  make_wire -720 2400 -800 2400
+  make_wire -770 2420 -850 2420
+  make_wire -640 2420 -770 2420
+  make_wire -890 2500 -970 2500
+  make_wire -890 2500 -640 2500
+  make_wire -640 2500 -640 2520
+  make_wire -1020 2520 -1000 2520
+  make_wire -1000 2520 -640 2520
+  make_wire -640 2680 -890 2680
+  make_wire -640 2660 -1040 2660
+  make_wire -1040 2660 -1040 2670
+  make_wire -640 2760 -1040 2760
+  make_wire -640 2780 -890 2780
+}
+

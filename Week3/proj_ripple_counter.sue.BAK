@@ -1,0 +1,29 @@
+proc SCHEMATIC_proj_ripple_counter {} {
+make proj_dff_1x -name xi0 -origin {-520 -40}
+make proj_dff_1x -name xi1 -origin {-80 -40}
+make output -name out2 -origin {150 10}
+make output -name out1 -origin {-320 -40}
+make input -name CLK -origin {-620 -20}
+make input -name RESET -origin {-940 0}
+make name_net -name RESET -origin {-490 -100}
+make name_net -name RESET -origin {-50 -100}
+  make_wire -420 -60 -320 -60
+  make_wire -320 -20 -180 -20
+  make_wire -420 -60 -420 -40
+  make_wire -420 -40 -360 -40
+  make_wire -360 -40 -360 -190
+  make_wire -360 -190 -670 -190
+  make_wire -670 -190 -670 -60
+  make_wire -670 -60 -620 -60
+  make_wire 20 -40 170 -40
+  make_wire 170 -40 170 -290
+  make_wire 170 -290 -250 -290
+  make_wire -250 -290 -250 -60
+  make_wire -250 -60 -180 -60
+  make_wire 20 -60 70 -60
+  make_wire 70 -60 70 10
+  make_wire 70 10 150 10
+  make_wire -320 -60 -320 -40
+  make_wire -320 -40 -320 -20
+}
+

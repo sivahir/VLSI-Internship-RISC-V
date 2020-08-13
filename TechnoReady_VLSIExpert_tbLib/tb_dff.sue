@@ -1,0 +1,25 @@
+proc SCHEMATIC_tb_dff {} {
+make proj_dff_1x -name xi0 -origin {4770 1090}
+make global -name gnd -origin {4570 1190}
+make global -name gnd -origin {4420 1180}
+make output -name Q -origin {4950 1070}
+make output -name Q_b -origin {4950 1090}
+make name_net -name D -origin {4570 1070}
+make name_net -name clk -origin {4620 1110}
+make global -name gnd -origin {4940 970}
+make name_net -name reset_b -origin {4870 890}
+make pulse -name V2 -pulse_voltage 1.3V -delay_time 25ns -pulse_width 200ns -period 400ns -origin {4940 930}
+make pulse -name V0 -pulse_voltage 1.3V -origin {4570 1150}
+make pulse -name V1 -pulse_voltage 1.3V -delay_time 2ns -pulse_width 10ns -period 20ns -origin {4420 1140}
+  make_wire 4420 1100 4420 1070
+  make_wire 4870 1070 4950 1070
+  make_wire 4870 1090 4950 1090
+  make_wire 4620 1110 4670 1110
+  make_wire 4620 1110 4570 1110
+  make_wire 4800 890 4870 890
+  make_wire 4870 890 4940 890
+  make_wire 4800 1030 4800 890
+  make_wire 4420 1070 4570 1070
+  make_wire 4570 1070 4670 1070
+}
+

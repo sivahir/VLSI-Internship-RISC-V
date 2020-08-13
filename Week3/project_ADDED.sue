@@ -1,0 +1,39 @@
+proc SCHEMATIC_project_ADDED {} {
+make proj_xor1x -name xi0 -origin {1060 150}
+make proj_and1x -name xi1 -origin {1090 250}
+make input -name A -origin {850 140}
+make input -name B -origin {800 160}
+make output -name half_out -origin {1200 150}
+make output -name half_carry -origin {1250 250}
+  make_wire 1160 150 1200 150
+  make_wire 1190 250 1250 250
+  make_wire 990 250 940 250
+  make_wire 940 140 960 140
+  make_wire 940 140 850 140
+  make_wire 940 140 940 250
+  make_wire 990 270 900 270
+  make_wire 900 270 900 160
+  make_wire 900 160 960 160
+  make_wire 900 160 800 160
+}
+
+proc ICON_project_ADDED args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -20} -name A
+icon_term -type input -origin {-100 0} -name B
+icon_term -type input -origin {-100 20} -name A
+icon_term -type input -origin {-100 40} -name B
+icon_term -type output -origin {100 -20} -name half_out
+icon_term -type output -origin {100 0} -name half_carry
+icon_property -origin {-90 -20} -label A
+icon_property -origin {-90 0} -label B
+icon_property -origin {-90 20} -label A
+icon_property -origin {-90 40} -label B
+icon_property -origin {90 -20} -anchor e -label half_out
+icon_property -origin {90 0} -anchor e -label half_carry
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -50} -label project_ADDED
+  icon_line -100 -60 100 -60 100 60 -100 60 -100 -60
+  icon_property -origin {-90 130} -type user -name name -default x
+}
+

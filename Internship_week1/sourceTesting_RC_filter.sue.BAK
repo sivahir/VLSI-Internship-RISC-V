@@ -1,0 +1,10 @@
+proc SCHEMATIC_sourceTesting_RC_filter {} {
+make name_net -name pulse_in -origin {190 400}
+make name_net -name pulse_in -origin {320 290}
+make global -name GND -origin {190 480}
+make project_RC_filter -name xi0 -origin {510 280}
+make pulse -name V0 -pulse_voltage 1.3V -origin {190 440}
+  make_wire 410 290 320 290
+  make_wire 610 290 720 290
+}
+

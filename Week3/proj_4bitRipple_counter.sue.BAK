@@ -1,0 +1,55 @@
+proc SCHEMATIC_proj_4bitRipple_counter {} {
+make proj_dff_1x -name xi0 -origin {-630 100}
+make input -name CLK -origin {-880 120}
+make input -name RESET -origin {-880 10}
+make output -name o4 -origin {630 80}
+make output -name o3 -origin {230 110}
+make proj_dff_1x -name xi1 -origin {-270 100}
+make proj_dff_1x -name xi2 -origin {70 100}
+make proj_dff_1x -name xi3 -origin {420 100}
+make output -name o2 -origin {-130 110}
+make output -name o1 -origin {-500 110}
+  make_wire -530 100 -480 100
+  make_wire -480 100 -480 -60
+  make_wire -480 -60 -800 -60
+  make_wire -800 -60 -800 80
+  make_wire -800 80 -730 80
+  make_wire -120 100 -120 -50
+  make_wire -400 -50 -400 80
+  make_wire -400 80 -370 80
+  make_wire -400 -50 -120 -50
+  make_wire -170 100 -120 100
+  make_wire 170 100 250 100
+  make_wire 250 100 250 -50
+  make_wire 250 -50 -70 -50
+  make_wire -70 -50 -70 80
+  make_wire -70 80 -30 80
+  make_wire 590 -50 280 -50
+  make_wire 280 -50 280 80
+  make_wire 280 80 320 80
+  make_wire 520 100 590 100
+  make_wire 590 100 590 -50
+  make_wire 170 80 230 80
+  make_wire 230 120 320 120
+  make_wire -170 80 -130 80
+  make_wire -130 120 -30 120
+  make_wire -530 80 -500 80
+  make_wire -370 120 -500 120
+  make_wire 450 10 450 40
+  make_wire 100 40 100 10
+  make_wire 100 10 450 10
+  make_wire -240 40 -240 10
+  make_wire -240 10 100 10
+  make_wire -600 10 -240 10
+  make_wire -600 10 -880 10
+  make_wire -730 120 -880 120
+  make_wire -600 10 -600 40
+  make_wire 520 80 630 80
+  make_wire 230 80 230 110
+  make_wire 230 110 230 120
+  make_wire -130 110 -130 80
+  make_wire -130 110 -130 120
+  make_wire -500 110 -500 80
+  make_wire -500 110 -500 120
+}
+

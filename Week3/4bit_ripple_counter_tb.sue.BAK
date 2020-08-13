@@ -1,0 +1,27 @@
+proc SCHEMATIC_4bit_ripple_counter_tb {} {
+make pulse -name V0 -origin {-370 200}
+make global -name GND -origin {-320 240}
+make name_net -name CLK -origin {-310 40}
+make proj_4bitRipple_counter -name xi0 -origin {-30 60}
+make pulse -name V1 -origin {-270 200}
+make name_net -name RESET -origin {-290 90}
+make name_net -name out1 -origin {370 100}
+make name_net -name out2 -origin {270 80}
+make name_net -name out3 -origin {180 60}
+make name_net -name out4 -origin {110 40}
+  make_wire -370 160 -370 40
+  make_wire -320 240 -270 240
+  make_wire -320 240 -370 240
+  make_wire -310 40 -370 40
+  make_wire -310 40 -130 40
+  make_wire -130 60 -270 60
+  make_wire -270 90 -290 90
+  make_wire 370 100 70 100
+  make_wire 370 100 380 100
+  make_wire 270 80 70 80
+  make_wire 180 60 70 60
+  make_wire -270 60 -270 90
+  make_wire -270 90 -270 160
+  make_wire 70 40 110 40
+}
+

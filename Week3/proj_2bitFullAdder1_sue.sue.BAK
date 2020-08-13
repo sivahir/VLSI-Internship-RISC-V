@@ -1,0 +1,24 @@
+proc SCHEMATIC_proj_2bitFullAdder1_sue {} {
+make output -name CARRY -origin {440 210}
+make input -name vin_A0 -origin {-260 190}
+make input -name vin_A1 -origin {80 190}
+make input -name vin_B0 -origin {-310 210}
+make input -name vin_B1 -origin {80 210}
+make input -name c_in -origin {-370 230}
+make output -name SUM_1 -origin {360 190}
+make output -name SUM_0 -origin {-10 90}
+make proj_fullAdded -name xi0 -origin {-140 200}
+make proj_fullAdded -name xi1 -origin {180 200}
+  make_wire -40 210 10 210
+  make_wire 10 230 80 230
+  make_wire 10 210 10 230
+  make_wire 280 190 360 190
+  make_wire 280 210 440 210
+  make_wire -240 190 -260 190
+  make_wire -240 210 -310 210
+  make_wire -240 230 -370 230
+  make_wire -10 90 -20 90
+  make_wire -20 90 -20 190
+  make_wire -20 190 -40 190
+}
+

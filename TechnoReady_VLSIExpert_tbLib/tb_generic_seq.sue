@@ -1,0 +1,41 @@
+proc SCHEMATIC_tb_generic_seq {} {
+make proj_dff_1x -name xi0 -origin {10250 2210}
+make proj_mux_2to1_1x -name xi1 -origin {9920 2070}
+make input -name vin_init -origin {9750 2060}
+make global -name gnd -origin {9690 1980}
+make name_net -name init -origin {9950 1940}
+make global -name gnd -origin {9960 2310}
+make pulse -name V1 -pulse_voltage 1.3V -pulse_width 1ns -period 2ns -origin {9960 2270}
+make name_net -name clk -origin {10080 2230}
+make global -name gnd -origin {10170 2070}
+make name_net -name reset_b -origin {10280 2080}
+make pulse -name V2 -pulse_voltage 1.3V -delay_time 5ns -pulse_width 300ns -period 600ns -origin {10170 2030}
+make output -name Q -origin {10380 2190}
+make output -name Q_b -origin {10380 2210}
+make global -name gnd -origin {9370 2180}
+make name_net -name vin_init -origin {9370 2060}
+make name_net -name Q -origin {9720 2110}
+make pulse -name V0 -pulse_voltage 1.3V -delay_time 30ns -pulse_width 300ns -period 600ns -origin {9690 1940}
+make pulse -name V3 -pulse_voltage 1.3V -origin {9370 2120}
+  make_wire 10020 2070 10050 2070
+  make_wire 10050 2190 10150 2190
+  make_wire 10050 2070 10050 2190
+  make_wire 9820 2060 9750 2060
+  make_wire 9690 1900 9950 1900
+  make_wire 10080 2230 10150 2230
+  make_wire 10080 2230 9960 2230
+  make_wire 10170 1990 10280 1990
+  make_wire 9950 1900 9950 1940
+  make_wire 9950 1940 9950 2020
+  make_wire 10280 1990 10280 2080
+  make_wire 10280 2080 10280 2150
+  make_wire 10350 2190 10380 2190
+  make_wire 10350 2210 10380 2210
+  make_wire 9370 2040 9370 2060
+  make_wire 9370 2060 9370 2080
+  make_wire 9790 2080 9820 2080
+  make_wire 9790 2080 9790 2110
+  make_wire 9790 2110 9720 2110
+  make_wire 9370 2160 9370 2180
+}
+

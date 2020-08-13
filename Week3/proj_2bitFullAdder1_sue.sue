@@ -1,0 +1,48 @@
+proc SCHEMATIC_proj_2bitFullAdder1_sue {} {
+make output -name CARRY -origin {440 210}
+make input -name vin_A0 -origin {-260 190}
+make input -name vin_A1 -origin {80 190}
+make input -name vin_B0 -origin {-310 210}
+make input -name vin_B1 -origin {80 210}
+make input -name c_in -origin {-370 230}
+make output -name SUM_1 -origin {360 190}
+make output -name SUM_0 -origin {-10 90}
+make proj_fullAdded -name xi0 -origin {-140 200}
+make proj_fullAdded -name xi1 -origin {180 200}
+  make_wire -40 210 10 210
+  make_wire 10 230 80 230
+  make_wire 10 210 10 230
+  make_wire 280 190 360 190
+  make_wire 280 210 440 210
+  make_wire -240 190 -260 190
+  make_wire -240 210 -310 210
+  make_wire -240 230 -370 230
+  make_wire -10 90 -20 90
+  make_wire -20 90 -20 190
+  make_wire -20 190 -40 190
+}
+
+proc ICON_proj_2bitFullAdder1_sue args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -30} -name vin_A0
+icon_term -type input -origin {-100 -10} -name vin_A1
+icon_term -type input -origin {-100 10} -name vin_B0
+icon_term -type input -origin {-100 30} -name vin_B1
+icon_term -type input -origin {-100 50} -name c_in
+icon_term -type output -origin {100 -30} -name CARRY
+icon_term -type output -origin {100 -10} -name SUM_1
+icon_term -type output -origin {100 10} -name SUM_0
+icon_property -origin {-90 -30} -label vin_A0
+icon_property -origin {-90 -10} -label vin_A1
+icon_property -origin {-90 10} -label vin_B0
+icon_property -origin {-90 30} -label vin_B1
+icon_property -origin {-90 50} -label c_in
+icon_property -origin {90 -30} -anchor e -label CARRY
+icon_property -origin {90 -10} -anchor e -label SUM_1
+icon_property -origin {90 10} -anchor e -label SUM_0
+icon_property -origin {-90 -80} -label {$name}
+icon_property -origin {-90 -60} -label proj_2bitFullAdder1_sue
+  icon_line -100 -70 100 -70 100 70 -100 70 -100 -70
+  icon_property -origin {-90 140} -type user -name name -default x
+}
+

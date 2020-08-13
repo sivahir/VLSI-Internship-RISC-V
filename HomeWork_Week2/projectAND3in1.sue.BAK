@@ -1,0 +1,19 @@
+proc SCHEMATIC_projectAND3in1 {} {
+make proj_and1x -name xi0 -origin {420 120}
+make input -name vin_A -origin {240 240}
+make input -name vin_B -origin {240 280}
+make proj_and1x -name xi1 -origin {700 200}
+make input -name vin_C -origin {240 310}
+make name_net -name vin_A -origin {290 120}
+make name_net -name vin_B -origin {260 140}
+make name_net -name vin_C -origin {510 220}
+make output -name out -origin {870 200}
+  make_wire 320 120 290 120
+  make_wire 320 140 260 140
+  make_wire 520 120 560 120
+  make_wire 560 200 600 200
+  make_wire 560 120 560 200
+  make_wire 600 220 510 220
+  make_wire 800 200 870 200
+}
+

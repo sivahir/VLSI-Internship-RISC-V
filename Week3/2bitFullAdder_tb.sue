@@ -1,0 +1,30 @@
+proc SCHEMATIC_2bitFullAdder_tb {} {
+make global -name GND -origin {-280 340}
+make global -name GND -origin {-170 90}
+make global -name GND -origin {-360 10}
+make name_net -name vin_a0 -origin {-320 240}
+make name_net -name vin_b0 -origin {-240 240}
+make name_net -name vin_a0 -origin {-190 -10}
+make name_net -name vin_b0 -origin {-230 30}
+make pulse -name V0 -pulse_voltage 1.3V -origin {-320 280}
+make pulse -name V1 -pulse_voltage 1.3V -origin {-240 280}
+make proj_2bitFullAdder1_sue -name xi0 -origin {50 20}
+make name_net -name c_out -origin {320 -10}
+make name_net -name s_1 -origin {410 10}
+make name_net -name s_2 -origin {450 30}
+  make_wire -280 320 -240 320
+  make_wire -280 320 -320 320
+  make_wire -50 70 -170 70
+  make_wire -50 -10 -190 -10
+  make_wire -50 50 -320 50
+  make_wire -320 10 -360 10
+  make_wire -230 30 -50 30
+  make_wire -280 320 -280 340
+  make_wire -320 10 -50 10
+  make_wire -320 10 -320 50
+  make_wire -170 70 -170 90
+  make_wire 150 -10 320 -10
+  make_wire 150 10 410 10
+  make_wire 150 30 450 30
+}
+

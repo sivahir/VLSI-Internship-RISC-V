@@ -1,0 +1,33 @@
+proc SCHEMATIC_project_NAND {} {
+make global -name GND -origin {1600 630}
+make pmos -name M0 -w 2.0u -origin {1520 200}
+make pmos -name M1 -w 2.0u -origin {1680 200}
+make nmos -name M2 -w 2.0u -origin {1600 390}
+make nmos -name M3 -w 2.0u -origin {1600 520}
+make name_net -name vin_b -origin {1620 200}
+make name_net -name vin_b -origin {1540 520}
+make name_net -name vin_a -origin {1420 330}
+make input -name vin_a -origin {1220 210}
+make input -name vin_b -origin {1220 260}
+make global -orient RXY -name VDD -origin {1600 90}
+make output -name vout -origin {1760 320}
+  make_wire 1520 240 1520 280
+  make_wire 1680 280 1680 240
+  make_wire 1600 480 1600 430
+  make_wire 1600 560 1600 630
+  make_wire 1520 280 1600 280
+  make_wire 1600 280 1680 280
+  make_wire 1460 390 1540 390
+  make_wire 1460 200 1460 330
+  make_wire 1460 330 1460 390
+  make_wire 1420 330 1460 330
+  make_wire 1680 160 1680 110
+  make_wire 1520 110 1520 160
+  make_wire 1600 110 1520 110
+  make_wire 1600 110 1680 110
+  make_wire 1600 90 1600 110
+  make_wire 1600 320 1760 320
+  make_wire 1600 280 1600 320
+  make_wire 1600 320 1600 350
+}
+

@@ -1,0 +1,31 @@
+proc SCHEMATIC_project_inverter_ckt {} {
+make global -name GND -origin {1040 340}
+make output -name vout -origin {1040 190}
+make input -name vin -origin {880 200}
+make pmos -name M0 -w 2.0u -origin {1040 120}
+make nmos -name M1 -origin {1040 260}
+make global -orient RXY -name VDD -origin {1040 30}
+  make_wire 980 120 880 120
+  make_wire 880 260 980 260
+  make_wire 1040 30 1040 80
+  make_wire 1040 300 1040 340
+  make_wire 1040 160 1040 190
+  make_wire 1040 190 1040 220
+  make_wire 880 120 880 200
+  make_wire 880 200 880 260
+}
+
+proc ICON_project_inverter_ckt args {
+
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 10} -name vin
+icon_term -type output -origin {100 10} -name vout
+icon_property -origin {-90 10} -label vin
+icon_property -origin {90 10} -anchor e -label vout
+icon_property -origin {-90 -40} -label {$name}
+icon_property -origin {-90 -20} -label project_inverter_ckt
+  icon_line -100 -30 100 -30 100 30 -100 30 -100 -30
+  icon_property -origin {-90 100} -type user -name name -default x
+
+}
+

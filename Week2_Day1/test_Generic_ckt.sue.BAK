@@ -1,0 +1,43 @@
+proc SCHEMATIC_test_Generic_ckt {} {
+make project_MUX -name xi0 -origin {880 130}
+make testing_FF -name xi1 -origin {1200 190}
+make input -name vin_init -origin {720 140}
+make input -name vin_actual -origin {620 160}
+make global -name GND -origin {480 80}
+make global -name GND -origin {1200 80}
+make pulse -name V1 -pulse_voltage 1.3V -origin {1200 40}
+make global -name GND -origin {1030 20}
+make output -name Q -origin {1350 180}
+make output -name Q_B -origin {1380 200}
+make name_net -name init -origin {640 0}
+make name_net -name vin_init -origin {500 320}
+make name_net -name vin_actual -origin {640 320}
+make global -name GND -origin {640 400}
+make global -name GND -origin {500 400}
+make dc_voltage -name V3 -origin {640 360}
+make pulse -name V5 -pulse_voltage 1.3V -origin {1030 -20}
+make dc_voltage -name V9 -dc_voltage 2 -origin {500 360}
+make pulse -name V2 -pulse_voltage 1.3V -origin {480 40}
+  make_wire 980 120 1040 120
+  make_wire 1040 220 1100 220
+  make_wire 780 140 720 140
+  make_wire 780 160 620 160
+  make_wire 780 120 720 120
+  make_wire 720 0 720 120
+  make_wire 1040 120 1040 220
+  make_wire 1080 180 1080 0
+  make_wire 1100 180 1080 180
+  make_wire 1100 180 1100 200
+  make_wire 1100 200 1060 200
+  make_wire 1060 200 1060 70
+  make_wire 980 70 980 -80
+  make_wire 1030 -80 1030 -60
+  make_wire 1300 180 1350 180
+  make_wire 1300 200 1380 200
+  make_wire 640 0 480 0
+  make_wire 640 0 720 0
+  make_wire 980 -80 1030 -80
+  make_wire 980 70 1060 70
+  make_wire 1200 0 1080 0
+}
+
